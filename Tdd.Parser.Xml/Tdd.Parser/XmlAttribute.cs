@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Tdd.Parser
 {
-    public class XmlElement
+    public class XmlAttribute
     {
-        public IEnumerable<XmlAttribute> Attributes { get; set; }
-
         public string Name { get; set; }
+
+        public string Content { get; set; }
     }
 }

@@ -18,5 +18,18 @@ namespace Tdd.Parser.Test
             result.Should().NotBeNull();
             result.Name.Should().Be("sample");
         }
+
+        [Fact]
+        public void TestMinimalXml_Parse_WithAttributes()
+        {
+            // Arrange
+            var subject = new ParserEngine();
+
+            // Act
+            var result = subject.ParseTestString("<sample attr=\"attributecontent\"></sample>");
+
+            // Assert
+            result.Attributes.Should().ContainSingle(x => x.Name == "attr" && x.Content == "attributecontent");
+        }
     }
 }
