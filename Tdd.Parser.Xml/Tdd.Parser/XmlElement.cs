@@ -10,6 +10,8 @@ namespace Tdd.Parser
     {
         public IEnumerable<XmlAttribute> Attributes { get; set; }
 
+        public IEnumerable<XmlElement> Children { get; set; }
+
         public string Name { get; set; }
     }
 }
