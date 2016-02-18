@@ -58,7 +58,8 @@ namespace Tdd.Parser.Test
             var result = subject.ParseTestString("<sample />");
 
             // Assert
-            result.Children.Should().ContainSingle(x => x.Name == "childnode");
+            result.Should().NotBeNull();
+            result.Name.Should().Be("sample");
         }
     }
 }
